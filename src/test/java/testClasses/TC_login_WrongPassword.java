@@ -21,12 +21,15 @@ public class TC_login_WrongPassword extends BaseClass
         String errorMsg = lp.getUserErrorMsg(); // Assume this gets the error shown on failed login
         Boolean btnPresent = false;
 
-         try {
+         try 
+         {
                 LoginSuccessPageObject lspo = new LoginSuccessPageObject(driver);
-                btnPresent = lspo.isLogoutBtnDisplayed();
-                } catch (Exception e) {
+                btnPresent = lspo.isLogoutBtnDisplayed();     
+        }
+        catch (Exception e) 
+        {
                 // Ignore, since we expect failure
-            }
+        }
 
             System.out.println("Logout button displayed??:" + btnPresent);
             System.out.println("Error message: " + errorMsg);

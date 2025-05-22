@@ -1,12 +1,17 @@
 package baseClass;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -23,7 +28,7 @@ public class BaseClass
         property=new Properties();
         try
         {
-            FileInputStream fis=new FileInputStream("/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/resources/config.properties");
+            FileInputStream fis=new FileInputStream("/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/main/resources/config.properties");
             property.load(fis);
 
         }
@@ -43,6 +48,19 @@ public class BaseClass
     {
         driver.quit();
     }
+
+    public  static String captureScreen(String tname) throws IOException
+	{
+ 
+		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		String targetFilePath="/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/screenshots/" + tname + "_" + timeStamp + ".jpg";
+		File targetFile=new File(targetFilePath);
+		sourceFile.renameTo(targetFile);
+		return targetFilePath;
+ 
+	}
 
 
 }
