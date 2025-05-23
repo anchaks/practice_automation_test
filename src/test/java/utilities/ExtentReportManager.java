@@ -37,7 +37,7 @@ public class ExtentReportManager implements ITestListener
 		*/
 		String timestamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//timestamp
 		repName="test-Report-"+timestamp+".html";
-		sparkReporter =new ExtentSparkReporter("/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/test_output/"+repName);//specify location of the report
+		sparkReporter =new ExtentSparkReporter("D:\\VSCodeProjects\\practice_automation_test\\test_output\\"+repName);//specify location of the report
 		sparkReporter.config().setDocumentTitle("Login Functional test suite");
 		sparkReporter.config().setReportName("Login Functional test cases execution results");
 		sparkReporter.config().setTheme(Theme.DARK);

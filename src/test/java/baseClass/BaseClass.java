@@ -14,29 +14,43 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 public class BaseClass 
 {
     public static WebDriver driver;
     public Properties property;
 
+    @Parameters("browser")
     @BeforeClass
-    public void setup()throws IOException
+    public void setup(String browserName) throws IOException
     {
-        property=new Properties();
+        property = new Properties();
         try
         {
-            FileInputStream fis=new FileInputStream("/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/main/resources/config.properties");
+            FileInputStream fis = new FileInputStream("D:\\VSCodeProjects\\practice_automation_test\\src\\main\\resources\\config.properties");
             property.load(fis);
 
         }
         catch(FileNotFoundException e)
         {
-            e.printStackTrace();
+            throw new RuntimeException("Configuration file not found", e);
         }
-        driver=new ChromeDriver();
+        
+       switch (browserName.toLowerCase()) 
+       {
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new IllegalArgumentException("Unsupported browser: " + browserName);
+        }
         driver.manage().deleteAllCookies();
         driver.get(property.getProperty("appURL"));
         driver.manage().window().maximize();
@@ -49,18 +63,14 @@ public class BaseClass
         driver.quit();
     }
 
-    public  static String captureScreen(String tname) throws IOException
-	{
- 
-		String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String targetFilePath="/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/screenshots/" + tname + "_" + timeStamp + ".jpg";
-		File targetFile=new File(targetFilePath);
-		sourceFile.renameTo(targetFile);
-		return targetFilePath;
- 
-	}
-
-
+    public static String captureScreen(String tname) throws IOException
+    {
+        String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        String targetFilePath = "D:\\VSCodeProjects\\practice_automation_test\\screenshots\\" + tname + "_" + timeStamp + ".jpg";
+        File targetFile = new File(targetFilePath);
+        sourceFile.renameTo(targetFile);
+        return targetFilePath;
+    }
 }

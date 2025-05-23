@@ -4,22 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>parabanking_project</groupId>
-    <artifactId>parabanking_project</artifactId>
+    <groupId>practice_automation_test</groupId>
+    <artifactId>practice_automation_test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
+	
     <build>
-	<pluginManagement>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -31,7 +26,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</pluginManagement>
 </build>
 
 
@@ -70,12 +64,6 @@
 	<dependency>
 		<groupId>org.apache.poi</groupId>
 		<artifactId>poi</artifactId>
-		<version>5.2.5</version>
-	</dependency>
-	<!-- Apache POI for Excel .xlsx support -->
-	<dependency>
-		<groupId>org.apache.poi</groupId>
-		<artifactId>poi-ooxml</artifactId>
 		<version>5.2.5</version>
 	</dependency>
 	<!-- Needed for XMLBeans (required by POI) -->

@@ -7,9 +7,19 @@
 	</listeners>
 
     <!-- Test Configuration -->
-    <test name="Login Test Suite">
-        <parameter name="os" value="macOS" />
+    <test name="Login Chrome Test Suite">
+        <!--<parameter name="os" value="windows" />-->
         <parameter name="browser" value="chrome" />
+        <classes>
+            <!-- Add your test classes here -->
+            <class name="testClasses.TC_001_Login" />
+            <class name="testClasses.TC_login_WrongUserName" />
+            <class name="testClasses.TC_login_WrongPassword" />
+        </classes>
+    </test>
+    <test name="Login Edge Test Suite">
+        <!--<parameter name="os" value="windows" />-->
+        <parameter name="browser" value="edge" />
         <classes>
             <!-- Add your test classes here -->
             <class name="testClasses.TC_001_Login" />
