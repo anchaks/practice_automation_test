@@ -20,8 +20,9 @@ public class TC_login_WrongUserName extends BaseClass
 
         String errorMsg = lp.getUserErrorMsg(); // Assume this gets the error shown on failed login
         Boolean btnPresent = false;
-
-         try {
+        
+         try 
+         {
                 LoginSuccessPageObject lspo = new LoginSuccessPageObject(driver);
                 btnPresent = lspo.isLogoutBtnDisplayed();
                 } catch (Exception e) {
@@ -31,6 +32,8 @@ public class TC_login_WrongUserName extends BaseClass
             System.out.println("Logout button displayed??:" + btnPresent);
             System.out.println("Error message: " + errorMsg);
 
+            /* 
+
             if (!btnPresent && errorMsg.contains("Invalid username") ) 
             {
                     System.out.println("TEST CASE PASSED - Login failed as expected.");
@@ -39,6 +42,16 @@ public class TC_login_WrongUserName extends BaseClass
             {
              Assert.fail("Login succeeded or unexpected behavior: " + errorMsg);
             }
+             */
+
+            if(!btnPresent && errorMsg.equals("Your username is invalid!"))
+             {
+                System.out.println("TEST CASE PASSED - Login failed as expected.");
+             }
+             else
+             {
+                Assert.fail("Login succeeded or unexpected behavior: " + errorMsg);
+             }
     }
 
 }

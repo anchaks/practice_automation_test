@@ -21,8 +21,8 @@ public class TC_login_WrongPassword extends BaseClass
         String errorMsg = lp.getUserErrorMsg(); // Assume this gets the error shown on failed login
         Boolean btnPresent = false;
 
-         try 
-         {
+        try 
+        {
                 LoginSuccessPageObject lspo = new LoginSuccessPageObject(driver);
                 btnPresent = lspo.isLogoutBtnDisplayed();     
         }
@@ -33,7 +33,7 @@ public class TC_login_WrongPassword extends BaseClass
 
             System.out.println("Logout button displayed??:" + btnPresent);
             System.out.println("Error message: " + errorMsg);
-
+            /* 
             if (!btnPresent && errorMsg.contains("Invalid password") ) 
             {
                     System.out.println("TEST CASE PASSED - Login failed as expected.");
@@ -42,6 +42,16 @@ public class TC_login_WrongPassword extends BaseClass
             {
              Assert.fail("Login succeeded or unexpected behavior: " + errorMsg);
             }
+             */
+
+             if(!btnPresent && errorMsg.equals("Your password is invalid!"))
+             {
+                System.out.println("TEST CASE PASSED - Login failed as expected.");
+             }
+             else
+             {
+                Assert.fail("Login succeeded or unexpected behavior: " + errorMsg);
+             }
     }
 
 }
