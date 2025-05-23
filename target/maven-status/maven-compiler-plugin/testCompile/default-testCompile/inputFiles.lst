@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\VSCodeProjects\practice_automation_test\src\test\java\testClasses\TC_001_Login.java
 D:\VSCodeProjects\practice_automation_test\src\test\java\testClasses\TC_login_WrongPassword.java
 D:\VSCodeProjects\practice_automation_test\src\test\java\baseClass\BaseClass.java
@@ -6,3 +7,13 @@ D:\VSCodeProjects\practice_automation_test\src\test\java\testClasses\TC_login_Wr
 D:\VSCodeProjects\practice_automation_test\src\test\java\pageObjects\LoginPageObjects.java
 D:\VSCodeProjects\practice_automation_test\src\test\java\utilities\TakeScreenshot.java
 D:\VSCodeProjects\practice_automation_test\src\test\java\pageObjects\LoginSuccessPageObject.java
+=======
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/baseClass/BaseClass.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/pageObjects/LoginPageObjects.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/pageObjects/LoginSuccessPageObject.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/testClasses/TC_001_Login.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/testClasses/TC_login_WrongPassword.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/testClasses/TC_login_WrongUserName.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/utilities/ExtentReportManager.java
+/Users/arnab/Desktop/Programming_Projects/VSCodeProjects/practice_automation_test/src/test/java/utilities/TakeScreenshot.java
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b

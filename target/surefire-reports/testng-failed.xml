@@ -4,7 +4,12 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" name="Login Chrome Test Suite(failed)" verbose="0">
+=======
+  <test thread-count="5" name="Login Test Suite(failed)" verbose="0">
+    <parameter name="os" value="macOS"/>
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testClasses.TC_login_WrongUserName">
@@ -22,6 +27,7 @@
         </methods>
       </class> <!-- testClasses.TC_login_WrongPassword -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- Login Chrome Test Suite(failed) -->
   <test thread-count="5" name="Login Edge Test Suite(failed)" verbose="0">
     <parameter name="browser" value="edge"/>
@@ -42,4 +48,7 @@
       </class> <!-- testClasses.TC_login_WrongPassword -->
     </classes>
   </test> <!-- Login Edge Test Suite(failed) -->
+=======
+  </test> <!-- Login Test Suite(failed) -->
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
 </suite> <!-- Failed suite [Login Test Suite] -->

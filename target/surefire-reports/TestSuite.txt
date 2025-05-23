@@ -1,8 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 96.83 s <<< FAILURE! -- in TestSuite
 testClasses.TC_login_WrongUserName.login -- Time elapsed: 10.57 s <<< FAILURE!
+=======
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 36.83 s <<< FAILURE! -- in TestSuite
+testClasses.TC_login_WrongUserName.login -- Time elapsed: 10.44 s <<< FAILURE!
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
 java.lang.AssertionError: Login succeeded or unexpected behavior: 
 	at org.testng.Assert.fail(Assert.java:111)
 	at testClasses.TC_login_WrongUserName.login(TC_login_WrongUserName.java:40)
@@ -16,7 +21,11 @@ java.lang.AssertionError: Login succeeded or unexpected behavior:
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -37,7 +46,11 @@ java.lang.AssertionError: Login succeeded or unexpected behavior:
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 testClasses.TC_login_WrongPassword.login -- Time elapsed: 10.52 s <<< FAILURE!
+=======
+testClasses.TC_login_WrongPassword.login -- Time elapsed: 10.41 s <<< FAILURE!
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
 java.lang.AssertionError: Login succeeded or unexpected behavior: Your password is invalid!
 	at org.testng.Assert.fail(Assert.java:111)
 	at testClasses.TC_login_WrongPassword.login(TC_login_WrongPassword.java:43)
@@ -51,6 +64,7 @@ java.lang.AssertionError: Login succeeded or unexpected behavior: Your password 
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
@@ -122,6 +136,9 @@ java.lang.AssertionError: Login succeeded or unexpected behavior:
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+>>>>>>> d5c15cc743b3cdfa036740b26823370cc5b0292b
 	at org.testng.TestRunner.privateRun(TestRunner.java:819)
 	at org.testng.TestRunner.run(TestRunner.java:619)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
